@@ -19,7 +19,7 @@ function setup() {
 
   airSnd = loadSound("air.wav");
 
-  ball = new Ball(600,250,150)
+  ball = new Ball(600,350,80)
   blower = new Blower(600,400,150,150);
   blowerMouth = new BlowerMouth(425,450,200,20)
 
@@ -32,6 +32,7 @@ function setup() {
 
 function draw() {
   background(0,0,0);  
+  Engine.update(engine);
   ball.display();
   blower.display();
   blowerMouth.display();
@@ -40,6 +41,6 @@ function draw() {
 
 function blow()
 {
-  Body.applyForce(ball,{x:0,y:0},{x:0,y:1})
+  Body.applyForce(ball.body,{x:0,y:0},{x:0,y:1})
   airSnd.play();
 }

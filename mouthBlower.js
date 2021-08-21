@@ -3,7 +3,7 @@ class BlowerMouth
     constructor(x,y,width,height)
     {
         var options={
-            isStatics:true
+            isStatic:true
             }
             this.x=x;
             this.y=y;
